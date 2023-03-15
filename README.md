@@ -1,4 +1,4 @@
-# A restaurant Chatbot server created with Socket.io
+# A restaurant Chatbot server created using Expressjs and Socket.io
 
 This chatbot assists customers with placing orders for their preferred meals.
 
