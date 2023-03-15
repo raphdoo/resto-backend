@@ -12,8 +12,7 @@ app.use(cors());
 const http = require('http').createServer(app);
 const io = new Server(http, {
     cors: {
-        origin: "http://localhost:3000",
-        methods: ["GET", "POST"]
+        origin: "https://chefbot.onrender.com" || "http://localhost:3000"
     }
 });
 
@@ -56,6 +55,10 @@ const { connectSocket } = require("./config/connection");
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended:true }));
+
+app.get("/", (req, res)=>{
+    res.status(200).send("hello")
+})
 
 
 //Socket.io connection middleware
